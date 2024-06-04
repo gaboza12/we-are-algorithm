@@ -71,13 +71,15 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
 <br />
 <br />
 
-## 👻소환사 챔피언
+## 👻참여자
 <table>
  <tr>
     <td align="center"><a href="https://github.com/Naezan"><img src="https://avatars.githubusercontent.com/Naezan" width="100px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/10o0o"><img src="https://avatars.githubusercontent.com/10o0o" width="100px;" alt=""></a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Naezan"><b>Naezan</b></a></td>
+    <td align="center"><a href="https://github.com/10o0o"><b>10o0o</b></a></td>
   </tr>
 </table>
 
