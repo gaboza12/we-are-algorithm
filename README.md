@@ -41,7 +41,7 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
 |feat     | 새로 추가                 |
 |fix      | 버그, 오류 수정           |
 |refactor | 코드 개선                 |
-|comment  | 주석, 간단한 코드 수정     |
+|mod      | 주석, 간단한 코드 수정     |
 |docs     | 문서 및 파일, 폴더명 수정  |
 |merge    | 머지                     |
 
@@ -83,3 +83,6 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
 
 <br/>
 <br/>
+
+## 🐈알고리즘 문제 참고
+- 모든 문제는 [해당 사이트](https://github.com/tony9402/baekjoon/blob/main/picked.md)를 통해 선정할 예정입니다.
