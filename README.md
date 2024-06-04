@@ -1,9 +1,9 @@
-# 도전 나도 코딩테스트 고수!!
+# 🔥도전 나도 코딩테스트 고수!!🔥
 
 <br />
 <br />
 
-## 참여 방법
+## ❓참여 방법
 1. 이 저장소를 `fork`
 2. 생성된 원격 저장소에 `githubID`로 폴더를 생성
 3. 생성된 폴더에 자신의 소스코드를 업로드 (예시: `Naezan/원하는폴더이름/문제번호.cpp`)
@@ -14,7 +14,7 @@
 <br />
 <br />
 
-## 📝 소스코드 파일 규칙
+## 📝소스코드 파일 규칙
 - 자유롭게 작성
 ```
 Naezan/Week1~ or 문제유형/문제번호.cpp
@@ -24,7 +24,7 @@ Naezan/Week1~ or 문제유형/문제번호.cpp
 <br />
 <br />
 
-## 📌 Commit 규칙
+## 📌Commit 규칙
 작성법
 ```
 커밋태그 : 문제이름 / 난이도 / 링크(선택)
@@ -34,7 +34,7 @@ Naezan/Week1~ or 문제유형/문제번호.cpp
 git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.net/problem/31940"
 ```
 
-#### 커밋 태그
+#### 🏷️커밋 태그
 
 | 태그 | 설명 |
 |:----|:-----------------------------|
@@ -48,7 +48,7 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
 <br />
 <br />
 
-## 🤙 PR 규칙
+## 🤙PR 규칙
 - 제목 작성법
 ```
 사용자 이름 / 날짜 / 푼 문제 수
@@ -58,7 +58,7 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
 <br />
 <br />
 
-## 📓 코드리뷰 방법
+## 📓코드리뷰 방법
 ⚠️ 코드리뷰는 PR에서 진행
 
 - PR에 올라온 전체 코드의 흐름을 이해
@@ -71,7 +71,7 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
 <br />
 <br />
 
-## 👩‍👦‍👦 소환사 챔피언
+## 👻소환사 챔피언
 <table>
  <tr>
     <td align="center"><a href="https://github.com/Naezan"><img src="https://avatars.githubusercontent.com/Naezan" width="100px;" alt=""></a></td>
