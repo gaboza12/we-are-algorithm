@@ -76,20 +76,23 @@ git commit -m "feat: 농지 나누어 갖기 / 브론즈5 / https://www.acmicpc.
  <tr>
     <td align="center"><a href="https://github.com/Naezan"><img src="https://avatars.githubusercontent.com/Naezan" width="100px;" alt=""></a></td>
     <td align="center"><a href="https://github.com/10o0o"><img src="https://avatars.githubusercontent.com/10o0o" width="100px;" alt=""></a></td>
-    <td align="center"><a href="https://github.com/10o0o"><img src="https://avatars.githubusercontent.com/724thomas" width="100px;" alt=""></a></td>
-    <td align="center"><a href="https://github.com/10o0o"><img src="https://avatars.githubusercontent.com/gaboza12" width="100px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/724thomas"><img src="https://avatars.githubusercontent.com/724thomas" width="100px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/gaboza12"><img src="https://avatars.githubusercontent.com/gaboza12" width="100px;" alt=""></a></td>
+    <td align="center"><a href="https://github.com/zxzxvcdd"><img src="https://avatars.githubusercontent.com/zxzxvcdd" width="100px;" alt=""></a></td>
   </tr>
   <tr>
     <td align="center"><img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"></td>
     <td align="center"><img src="https://img.shields.io/badge/javascript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=20232a"></td>
     <td align="center"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"></td>
     <td align="center"><img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"></td>
+    <td align="center"><img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white"></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Naezan"><b>Naezan</b></a></td>
     <td align="center"><a href="https://github.com/10o0o"><b>10o0o</b></a></td>
-    <td align="center"><a href="https://github.com/10o0o"><b>724thomas</b></a></td>
-    <td align="center"><a href="https://github.com/10o0o"><b>gaboza12</b></a></td>
+    <td align="center"><a href="https://github.com/724thomas"><b>724thomas</b></a></td>
+    <td align="center"><a href="https://github.com/gaboza12"><b>gaboza12</b></a></td>
+    <td align="center"><a href="https://github.com/zxzxvcdd"><b>zxzxvcdd</b></a></td>
   </tr>
 </table>
 
