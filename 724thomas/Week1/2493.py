@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/problem/24933
+# https://www.acmicpc.net/problem/2493
 
 '''
 1. 아이디어 :

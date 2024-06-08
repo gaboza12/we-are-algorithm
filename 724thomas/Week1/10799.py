@@ -2,11 +2,11 @@
 
 '''
 1. 아이디어 :
-    -
+    - 스택 사용
 2. 시간복잡도 :
     O ( n )
 3. 자료구조 :
-    -
+    스택
 '''
 
 from collections import deque
@@ -24,7 +24,6 @@ def solution(arr):
     for c in arr:
         if c == ".":
             ans += left
-            print(ans)
         if c == "(":
             left += 1
         elif c == ")":
