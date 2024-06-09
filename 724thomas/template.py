@@ -1,4 +1,4 @@
-#
+# https://www.acmicpc.net/problem/
 
 '''
 1. 아이디어 :
@@ -20,6 +20,7 @@ input = sys.stdin.readline
 #
 # s = input().rstrip()
 
+# arr = list(map(int, input().strip().split()))
 # integer_list = [int(num) for num in input().split()]
 # dp = [[0 for _ in range(n)] for _ in range(n)]
 # dp = [[0 for j in range(n)] for i in range(n)]
