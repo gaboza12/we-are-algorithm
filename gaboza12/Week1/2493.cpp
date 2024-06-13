@@ -10,7 +10,7 @@ int main()
 
 	cin >> n;
 	
-	stack<pair<int, int>> s; //ÀÎµ¦½º, ³ôÀÌ
+	stack<pair<int, int>> s; //ì¸ë±ìŠ¤, ë†’ì´
 
 	for (int i = 0; i < n; i++)
 	{
