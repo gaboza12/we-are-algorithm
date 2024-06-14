@@ -9,7 +9,6 @@ int main()
 	int n, h;
 
 	cin >> n;
-	
 	stack<pair<int, int>> s; //인덱스, 높이
 
 	for (int i = 0; i < n; i++)
