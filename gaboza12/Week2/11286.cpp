@@ -10,8 +10,6 @@ int main()
 	
 	priority_queue<int, vector<int>, greater<int>> positive; //양수
 	priority_queue<int> negative;//음수
-
-	vector<int> ans;
 	
 	cin >> n;
 
