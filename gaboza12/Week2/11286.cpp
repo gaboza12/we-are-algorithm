@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ï»¿#include<bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -8,11 +8,11 @@ int main()
 
 	int n, x;
 	
-	priority_queue<int, vector<int>, greater<int>> positive; //¾ç¼ö
-	priority_queue<int> negative;//À½¼ö
+	priority_queue<int, vector<int>, greater<int>> positive; //ì–‘ìˆ˜
+	priority_queue<int> negative;//ìŒìˆ˜
 	
 	cin >> n;
-
+	
 	for (int i = 0; i < n; i++)
 	{
 		cin >> x;
@@ -27,24 +27,24 @@ int main()
 		}
 		else
 		{
-			//µÑ´Ù ºñ¾îÀÖÀ»¶§
+			//ë‘˜ë‹¤ ë¹„ì–´ìˆì„ë•Œ
 			if (positive.size() == 0 && negative.size() == 0)
 			{
 				cout << "0\n";
 			}
-			//¾ç¼ö¹è¿­Àº ºñ¾îÀÖ°í À½¼ö¹è¿­Àº ºñ¾îÀÖÁö¾ÊÀ»¶§ 
+			//ì–‘ìˆ˜ë°°ì—´ì€ ë¹„ì–´ìˆê³  ìŒìˆ˜ë°°ì—´ì€ ë¹„ì–´ìˆì§€ì•Šì„ë•Œ 
 			else if (positive.size() == 0 && negative.size() != 0)
 			{
 				cout << negative.top() << "\n";
 				negative.pop();
 			}
-			//¾ç¼ö¹è¿­Àº ºñ¾îÀÖÁö¾Ê°í À½¼ö¹è¿­Àº ºñ¾îÀÖÀ»¶§
+			//ì–‘ìˆ˜ë°°ì—´ì€ ë¹„ì–´ìˆì§€ì•Šê³  ìŒìˆ˜ë°°ì—´ì€ ë¹„ì–´ìˆì„ë•Œ
 			else if (positive.size() != 0 && negative.size() == 0)
 			{
 				cout << positive.top() << "\n";
 				positive.pop();
 			}
-			//¹è¿­ µÎ°³´Ù ºñ¾îÀÖÁö ¾ÊÀ»¶§
+			//ë°°ì—´ ë‘ê°œë‹¤ ë¹„ì–´ìˆì§€ ì•Šì„ë•Œ
 			else
 			{
 				if (abs(negative.top()) <= positive.top())
