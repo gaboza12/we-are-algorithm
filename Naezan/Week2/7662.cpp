@@ -12,7 +12,7 @@ int main()
 
 	cin >> T;
 
-	// T ���̽� �ݺ�
+	// T 케이스 반복
 	for (int i = 0; i < T; ++i)
 	{
 		int k;
@@ -36,14 +36,14 @@ int main()
 					continue;
 				}
 
-				// �ִ� ����
+				// 최댓값 삭제
 				if (n == 1)
 				{
 					auto iter = dqlist.end();
 					--iter;
 					dqlist.erase(iter);
 				}
-				// �ּڰ� ����
+				// 최솟값 삭제
 				else if (n == -1)
 				{
 					dqlist.erase(dqlist.begin());
