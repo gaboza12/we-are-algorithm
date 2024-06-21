@@ -12,7 +12,7 @@ int main()
 	priority_queue<int> negative;//음수
 	
 	cin >> n;
-	
+
 	for (int i = 0; i < n; i++)
 	{
 		cin >> x;
