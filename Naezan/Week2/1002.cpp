@@ -18,31 +18,31 @@ int main()
 		int rr = pow(r1 + r2, 2);
 		int nrr = pow(r1 - r2, 2);
 
-		//ÀÏÄ¡
+		//ì¼ì¹˜
 		if (r1 == r2 && x1 == x2 && y1 == y2)
 		{
 			cout << "-1\n";
 		}
 		else
 		{
-			//¸ø¸¸³²
+			//ëª»ë§Œë‚¨
 			if (dd > rr)
 			{
 				cout << "0\n";
 			}
-			//¿ÜÁ¢
+			//ì™¸ì ‘
 			else if (dd == rr)
 			{
 				cout << "1\n";
 			}
 			else if (dd < rr)
 			{
-				//³»ºÎ
+				//ë‚´ë¶€
 				if (dd < nrr)
 				{
 					cout << "0\n";
 				}
-				//³»Á¢
+				//ë‚´ì ‘
 				else if (dd == nrr)
 				{
 					cout << "1\n";

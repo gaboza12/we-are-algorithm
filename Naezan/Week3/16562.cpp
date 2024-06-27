@@ -38,7 +38,7 @@ int main()
 		}
 		check[i] = true;
 
-		//°ü°è°¡ ¾ø´Ù¸é ´ÜÀÏ Ä£±¸ºñ ´õÇÏ±â
+		//ê´€ê³„ê°€ ì—†ë‹¤ë©´ ë‹¨ì¼ ì¹œêµ¬ë¹„ ë”í•˜ê¸°
 		if (relation[i].empty())
 		{
 			ans += cost[i];
@@ -50,7 +50,7 @@ int main()
 
 		q.push(i);
 
-		//BFS·Î °¡Àå ½Ñ ºñ¿ë Å½»ö
+		//BFSë¡œ ê°€ì¥ ì‹¼ ë¹„ìš© íƒìƒ‰
 		while (!q.empty())
 		{
 			int idx = q.front();
@@ -65,13 +65,13 @@ int main()
 
 				check[*iter] = true;
 
-				//ÀÚ±â ÀÚ½Å ¹«½Ã
+				//ìê¸° ìì‹  ë¬´ì‹œ
 				if (*iter == idx)
 				{
 					continue;
 				}
 
-				//°¡Àå ½Ñ ºñ¿ë °»½Å
+				//ê°€ì¥ ì‹¼ ë¹„ìš© ê°±ì‹ 
 				if (cost[*iter] < smallcost)
 				{
 					smallcost = cost[*iter];
@@ -81,7 +81,7 @@ int main()
 			}
 		}
 
-		//°¡Àå ½Ñ ºñ¿ë ¾÷µ¥ÀÌÆ®
+		//ê°€ì¥ ì‹¼ ë¹„ìš© ì—…ë°ì´íŠ¸
 		ans += smallcost;
 	}
 

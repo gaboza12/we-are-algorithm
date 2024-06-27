@@ -61,7 +61,7 @@ int main()
 			int a, b;
 			cin >> a >> b;
 
-			//°¡Àå ÀÛÀº °ªÀ» ºÎ¸ð·Î
+			//ê°€ìž¥ ìž‘ì€ ê°’ì„ ë¶€ëª¨ë¡œ
 			SetParent(a, b);
 		}
 		else if (c == 'Q')
@@ -69,7 +69,7 @@ int main()
 			int c;
 			cin >> c;
 
-			//Ãâ·Â
+			//ì¶œë ¥
 			cout << nodes[GetParent(c)] << '\n';
 		}
 	}

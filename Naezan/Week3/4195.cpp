@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+ï»¿#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -59,17 +59,17 @@ int main()
 			Init(s1);
 			Init(s2);
 
-			//ºÎ¸ð ¼ÂÆÃ
+			//ë¶€ëª¨ ì…‹íŒ…
 			SetParent(s1, s2);
 
-			//°ü°è°¡ ÀÖÀ¸¸é ±×³É ÇÏ³ª¸¸ Ãâ·Â
+			//ê´€ê³„ê°€ ìžˆìœ¼ë©´ ê·¸ëƒ¥ í•˜ë‚˜ë§Œ ì¶œë ¥
 			string p1 = GetParent(s1);
 			string p2 = GetParent(s2);
 			if (p1 == p2)
 			{
 				cout << nodes[p1] << '\n';
 			}
-			//°ü°è°¡ ¾øÀ¸¸é ¼­·Î ´õÇØ¼­ Ãâ·Â
+			//ê´€ê³„ê°€ ì—†ìœ¼ë©´ ì„œë¡œ ë”í•´ì„œ ì¶œë ¥
 			else
 			{
 				cout << nodes[p1] + nodes[p2] << '\n';
