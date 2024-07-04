@@ -1,6 +1,5 @@
 package zxzxvcdd.disjointSet;
 
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -28,40 +27,39 @@ import java.util.StringTokenizer;
 준석이가 모든 학생을 친구로 만들 수 있다면, 친구로 만드는데 드는 최소비용을 출력한다. 만약 친구를 다 사귈 수 없다면, “Oh no”(따옴표 제거)를 출력한다.
 
 */
-public class Q_16562{
+public class Q_16562 {
 
-    public static void main(String[] args) throws Exception{
-        
-        class Union{
+    public static void main(String[] args) throws Exception {
+
+        class Union {
 
             int[] parent;
 
             public Union(int size) {
                 parent = new int[size];
-                for(int i = 0; i < size; i++){
+                for (int i = 0; i < size; i++) {
                     parent[i] = i;
                 }
             }
 
-            int getParent(int i){
-                if(parent[i]==i) return i;
+            int getParent(int i) {
+                if (parent[i] == i) return i;
 
                 return parent[i] = getParent(parent[i]);
             }
 
-            public void union(int a, int b){
+            public void union(int a, int b) {
                 a = getParent(a);
                 b = getParent(b);
-                if(a!=b){
+                if (a != b) {
                     boolean flag = a > b;
                     int min = flag ? b : a;
                     int max = flag ? a : b;
                     parent[max] = min;
                 }
             }
-
         }
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer inputToken = new StringTokenizer(br.readLine());
@@ -73,37 +71,36 @@ public class Q_16562{
         Integer[] friendFees = new Integer[freiendCount];
         inputToken = new StringTokenizer(br.readLine());
         Union friendShip = new Union(freiendCount);
-        
-        for(int i=0; i < freiendCount; i++){
+
+        for (int i = 0; i < freiendCount; i++) {
             friendFees[i] = Integer.parseInt(inputToken.nextToken());
         }
-        
-        for(int i=0; i < friendshipCount; i++){
+
+        for (int i = 0; i < friendshipCount; i++) {
             inputToken = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(inputToken.nextToken())-1;
-            int b = Integer.parseInt(inputToken.nextToken())-1;
+            int a = Integer.parseInt(inputToken.nextToken()) - 1;
+            int b = Integer.parseInt(inputToken.nextToken()) - 1;
             friendShip.union(a, b);
         }
         Map<Integer, Integer> friendFeeMap = new HashMap<>();
 
-        for(int i=0; i< freiendCount; i++){
+        for (int i = 0; i < freiendCount; i++) {
             int parent = friendShip.getParent(i);
             int minPrice = friendFees[i];
             if (friendFeeMap.containsKey(parent) && friendFeeMap.get(parent) < minPrice) {
                 minPrice = friendFeeMap.get(parent);
             }
 
-            friendFeeMap.put(parent,minPrice);
+            friendFeeMap.put(parent, minPrice);
         }
 
         int totalFee = 0;
         for (int fee : friendFeeMap.values()) {
             totalFee += fee;
         }
-        
-        String result = (totalFee>moneny)? "Oh no":totalFee+"";
+
+        String result = (totalFee > moneny) ? "Oh no" : totalFee + "";
 
         System.out.println(result);
     }
-    
 }
