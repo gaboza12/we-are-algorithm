@@ -6,23 +6,23 @@ int K, M, ans;
 
 int maxnum;
 
-// false인 경우 소수임
 vector<bool> check;
-vector<int> samecheck;
+bool checksame[10] = { false, };
 
 vector<int> primes;
-unordered_map<int, bool> sumprimes;
-unordered_map<int, bool> mulprimes;
+vector<bool> sumprimes;
+vector<bool> mulprimes;
 
 void InitPrime()
 {
 	maxnum = pow(10, K);
-	check.resize(maxnum + 1, true);
+	check.resize(maxnum, true);
+	primes.reserve(maxnum);
 
 	check[0] = false;
 	check[1] = false;
 
-	for (int i = 2; i <= (int)sqrt(maxnum); ++i)
+	for (int i = 2; i * i < maxnum; ++i)
 	{
 		if (check[i])
 		{
@@ -33,7 +33,7 @@ void InitPrime()
 		}
 	}
 
-	for (int i = 2; i <= maxnum; ++i)
+	for (int i = 2; i < maxnum; ++i)
 	{
 		if (check[i])
 		{
@@ -44,6 +44,7 @@ void InitPrime()
 
 void SumOfPrime()
 {
+	sumprimes.resize(maxnum, false);
 	for (const auto& prime1 : primes)
 	{
 		// 최댓값보다 큰값이면 더이상 조사할 필요도 없음
@@ -72,6 +73,7 @@ void SumOfPrime()
 
 void MulOfPrime()
 {
+	mulprimes.resize(maxnum, false);
 	for (const auto& prime1 : primes)
 	{
 		if (prime1 >= maxnum)
@@ -83,55 +85,52 @@ void MulOfPrime()
 		{
 			long long primemul = (long long)prime1 * (long long)prime2;
 
-			if (sumprimes.count((int)primemul) > 0)
+			if (primemul < maxnum)
 			{
-				if (sumprimes[(int)primemul] && primemul < maxnum)
-				{
-					mulprimes[(int)primemul] = true;
-				}
+				mulprimes[(int)primemul] = true;
 			}
 		}
 	}
 }
 
-bool ValidDigit(const string& s)
-{
-	samecheck.resize(10, 0);
-	//각 자릿수를 순회하며 중복갯수 확인
-	for (int i = 0; i < s.size(); ++i)
-	{
-		int n = s[i] - '0';
-		++samecheck[n];
-	}
-
-	int count = 0;
-	for (int i = 0; i < s.size(); ++i)
-	{
-		int n = s[i] - '0';
-		if (samecheck[n] > 0)
-		{
-			++count;
-		}
-
-		//중복갯수가 1이 넘어가면 유효하지 않음
-		if (samecheck[n] > 1)
-		{
-			return false;
-		}
-	}
-
-	//K갯수만큼 없으면 유효하지 않음
-	return count == K;
-}
-
 bool CheckDivision(int n)
 {
+	if (!sumprimes[n])
+	{
+		return false;
+	}
+
 	while (n % M == 0)
 	{
 		n /= M;
 	}
 
-	return mulprimes.count(n) > 0;
+	return mulprimes[n];
+}
+
+void ValidDigit(int k, int n)
+{
+	if (k == 0)
+	{
+		if (CheckDivision(n))
+		{
+			++ans;
+		}
+		return;
+	}
+
+	for (int i = 0; i <= 9; ++i)
+	{
+		// 맨 앞자리 0이 들어오는 거 방지
+		if ((i == 0 && k == K) || checksame[i])
+		{
+			continue;
+		}
+
+		checksame[i] = true;
+		ValidDigit(k - 1, n * 10 + i);
+		checksame[i] = false;
+	}
 }
 
 int main()
@@ -148,20 +147,9 @@ int main()
 
 	MulOfPrime();
 
-	for (const auto& prime : mulprimes)
-	{
-		if (prime.second)
-		{
-			if (CheckDivision(prime.first))
-			{
-				string s = to_string(prime.first);
-				if (ValidDigit(s))
-				{
-					++ans;
-				}
-			}
-		}
-	}
+	//제일 높은자리부터 수를 생성하면서 최대 10^5만큼 반복
+	//k는 자리 높이, n은 확인할 값
+	ValidDigit(K, 0);
 
 	cout << ans;
 
