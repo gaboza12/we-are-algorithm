@@ -18,12 +18,12 @@ input = lambda: sys.stdin.readline().rstrip()
 
 def solution(c, n, arr):
     cmax = max([x[1] for x in arr])
-    dp = [float('inf')] * (c+cmax)
+    dp = [float('inf')] * (c + cmax)
     dp[0] = 0
-    arr.sort(key = lambda x: x[1], reverse=True)
+    arr.sort(key=lambda x: x[1], reverse=True)
     for cost, people in arr:
-        for i in range(people, c+cmax):
-            dp[i] = min(dp[i], dp[i-people] + cost)
+        for i in range(people, c + cmax):
+            dp[i] = min(dp[i], dp[i - people] + cost)
 
     return min(dp[c:])
 
