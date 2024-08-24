@@ -46,6 +46,7 @@ def solution(n, virus, checks, t):
 
         if not flag:
             board[x][y][day % 2] = False
+
     che_odd = t % 2
     # print(board)
     for x, y in checks:
