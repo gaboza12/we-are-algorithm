@@ -56,7 +56,7 @@ def solution(n, m, arr):
         if total < ans:
             ans = total
             best = comb
-    print(best[0], best[1], ans)
+    print(best[0], best[1], ans * 2)
 
 
 if __name__ == '__main__':
